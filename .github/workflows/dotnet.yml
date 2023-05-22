@@ -13,8 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env: 
-      testing-directory: ./src/FigureAreaCalculatorTests
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -27,4 +25,3 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-      working-directory: ${{env.testing-directory}}
