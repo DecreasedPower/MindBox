@@ -13,6 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: 
+      working-directory: ./src/FigureAreaCalculator
 
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +24,6 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: src/FigureAreaCalculator
     - name: Build
       run: dotnet build --no-restore --configuration Release
     - name: Test
