@@ -16,19 +16,19 @@
         throw new ArgumentException("Incorrect amount of sides");
       }
 
-      if (!(Sides[0] < Sides[1] + Sides[2] || Sides[1] < Sides[0] + Sides[2] || Sides[2] < Sides[0] + Sides[1]))
+      if (Sides[0] > Sides[1] + Sides[2] || Sides[1] > Sides[0] + Sides[2] || Sides[2] > Sides[0] + Sides[1])
       {
         throw new ArgumentException("Incorrect sides provided.");
       }
 
       if (Math.Abs(Math.Pow(Sides[2], 2) - (Math.Pow(Sides[0], 2) + Math.Pow(Sides[1], 2))) == 0)
       {
-        return 0.5 * Sides[1] * Sides[2];
+        return Math.Round(0.5 * Sides[0] * Sides[1], 2);
       }
       else
       {
         var p = 0.5 * Sides.Sum(x => x);
-        return Math.Sqrt(p * (p - Sides[0]) * (p - Sides[1]) * (p - Sides[2]));
+        return Math.Round(Math.Sqrt(p * (p - Sides[0]) * (p - Sides[1]) * (p - Sides[2])), 2);
       }
     }
   }
