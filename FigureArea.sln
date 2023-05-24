@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FigureAreaCalculator", "src\FigureAreaCalculator\FigureAreaCalculator.csproj", "{C5B31F87-A1D2-4348-95D9-36B28758D3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FigureArea", "src\FigureAreaCalculator\FigureArea.csproj", "{C5B31F87-A1D2-4348-95D9-36B28758D3CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FigureAreaCalculatorTests", "src\FigureAreaCalculatorTests\FigureAreaCalculatorTests.csproj", "{A085F743-1C7F-48A5-A122-0D42E117E13A}"
 EndProject
