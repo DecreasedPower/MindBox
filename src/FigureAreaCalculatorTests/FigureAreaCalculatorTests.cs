@@ -12,7 +12,7 @@ namespace FigureAreaCalculatorTests
       var expectedArea = 314.16;
 
       var circle = new Circle(10);
-      var actualArea = FigureAreaCalculator.CalculateArea(circle);
+      var actualArea = circle.GetArea();
 
       Assert.AreEqual(expectedArea, actualArea);
     }
@@ -23,7 +23,7 @@ namespace FigureAreaCalculatorTests
       var expectedArea = 0;
 
       var circle = new Circle(0);
-      var actualArea = FigureAreaCalculator.CalculateArea(circle);
+      var actualArea = circle.GetArea();
 
       Assert.AreEqual(expectedArea, actualArea);
     }
@@ -33,7 +33,7 @@ namespace FigureAreaCalculatorTests
     {
       var circle = new Circle(-0.1);
 
-      Assert.ThrowsException<ArgumentException>(() => FigureAreaCalculator.CalculateArea(circle));
+      Assert.ThrowsException<ArgumentException>(() => circle.GetArea());
     }
 
     [TestMethod]
@@ -42,7 +42,7 @@ namespace FigureAreaCalculatorTests
       var expectedArea = 3.9;
 
       var triangle = new Triangle(3, 3, 3);
-      var actualArea = FigureAreaCalculator.CalculateArea(triangle);
+      var actualArea = triangle.GetArea();
 
       Assert.AreEqual(expectedArea, actualArea);
     }
@@ -53,7 +53,7 @@ namespace FigureAreaCalculatorTests
       var expectedArea = 6;
 
       var triangle = new Triangle(3, 4, 5);
-      var actualArea = FigureAreaCalculator.CalculateArea(triangle);
+      var actualArea = triangle.GetArea();
 
       Assert.AreEqual(expectedArea, actualArea);
     }
@@ -63,7 +63,7 @@ namespace FigureAreaCalculatorTests
     {
       var triangle = new Triangle(3, 4);
 
-      Assert.ThrowsException<ArgumentException>(() => FigureAreaCalculator.CalculateArea(triangle));
+      Assert.ThrowsException<ArgumentException>(() => triangle.GetArea());
     }
 
     [TestMethod]
@@ -71,7 +71,7 @@ namespace FigureAreaCalculatorTests
     {
       var triangle = new Triangle(3, 4, 100);
 
-      Assert.ThrowsException<ArgumentException>(() => FigureAreaCalculator.CalculateArea(triangle));
+      Assert.ThrowsException<ArgumentException>(() => triangle.GetArea());
     }
   }
 }
